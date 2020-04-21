@@ -5,6 +5,8 @@ public class Solver {
 
 
     public static void main(String[] args) {
+	    
+	// a sudoku board that serves as an example to what the input of the sudoku class should be
         int[][] board = {
 			{0,0,0,0,0,0,7,0,2},
 			{0,0,0,0,0,4,0,0,0},
@@ -24,8 +26,5 @@ public class Solver {
     System.out.println();
     bo.printBoard();
     
-
-    //System.out.print(2 / 3);
-
     }
 }
