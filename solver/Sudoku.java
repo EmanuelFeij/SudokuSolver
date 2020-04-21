@@ -8,7 +8,7 @@ public class Sudoku {
     public Sudoku(int[][] board) {
         this.board = board;
     }
-
+    // this function prints the board 
     public void printBoard() {
         for (int[] is : this.board) {
             for (int i : is) {
@@ -18,7 +18,7 @@ public class Sudoku {
         }
         System.out.println();
     }
-
+    // this function finds the next position to try an number
     public int[] findEmpty() {
         int[] nextPos = {-1,-1};  
         for (int i = 0; i < 9; i++) {
@@ -33,7 +33,7 @@ public class Sudoku {
         }
         return nextPos;
     }
-
+    // tests an number given the position i.e row/column and the square.
     public boolean valid(int[] pos, int num) {
 
         //row
@@ -67,7 +67,13 @@ public class Sudoku {
 
         return true;
     }
-
+    /*
+    using backtracking this function goes forward until number is not in the right position or the board doesn't have empty spaces(0s).
+    When the number is not on right position "backtracks" to the previous position and try another number, if needed "backtracks" again 
+    or goes forward again.
+    
+    
+    */
     public boolean solve () {
 
         int[] pos = findEmpty().clone();
